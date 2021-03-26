@@ -1,0 +1,12 @@
+{
+    "name": "masood/money_conversion_numeric_to_urdu",
+    "description": "Money Conversion from Numeric Value to Urdu Package",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Masood Anwar",
+            "email": "masoodanwar85@gmail.com"
+        }
+    ],
+    "require": {}
+}
