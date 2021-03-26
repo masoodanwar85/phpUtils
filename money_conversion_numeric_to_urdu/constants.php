@@ -110,4 +110,39 @@
     define("digit_10000000000","دس ارب");
     define("digit_100000000000","کھرب");
     define("digit_1000000000000"," دس کھرب");
+
+    function translate($number) {
+        $aryRangeIndex = [
+            'length_3' => [ 'range' => 100, 'index' => 1],
+            'length_4' => [ 'range' => 1000, 'index' => 1],
+            'length_5' => [ 'range' => 1000, 'index' => 2],
+            'length_6' => [ 'range' => 100000, 'index' => 1],
+            'length_7' => [ 'range' => 100000, 'index' => 2],
+            'length_8' => [ 'range' => 10000000, 'index' => 1],
+            'length_9' => [ 'range' => 10000000, 'index' => 2],
+            'length_10' => [ 'range' => 1000000000, 'index' => 1],
+            'length_11' => [ 'range' => 1000000000, 'index' => 2],
+            'length_12' => [ 'range' => 100000000000, 'index' => 1],
+            'length_13' => [ 'range' => 100000000000, 'index' => 2]
+        ];
+        $number_to_convert = $number;
+        while ($number_to_convert != 0) {
+            $length = strlen($number_to_convert);
+            $constant_name = 'digit_' . $number_to_convert;
+            if (defined($constant_name)) {
+                echo constant($constant_name);
+                break;
+            } else {
+                $aryCurrentRangeIndex = $aryRangeIndex['length_' . $length];
+                $range = $aryCurrentRangeIndex['range'];
+                $idxPoint = $aryCurrentRangeIndex['index'];
+                $first_number = substr($number_to_convert,0,$idxPoint);
+                $remaining_numbers = substr($number_to_convert,$idxPoint);
+
+                echo constant('digit_' . $first_number) . ' ' . constant('digit_' . $range) . ' ';
+
+                $number_to_convert = (int) $remaining_numbers;
+            }
+        }
+    }
 ?>
