@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Conversion</title>
+        <script type="text/javascript" src="conversion.js"></script>
+    </head>
+    <body>
+        <input type="text" id="num" /> <button type="button" onClick="translateToUrdu()">Translate</button>
+        <div id="result"></div>
+        <script type="text/javascript">
+            function translateToUrdu() {
+                var numberValue = document.getElementById('num').value;
+                document.getElementById('result').innerHTML = translate(numberValue);
+            }
+        </script>
+    </body>
+</html>
