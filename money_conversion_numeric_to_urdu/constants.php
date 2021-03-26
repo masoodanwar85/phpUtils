@@ -113,13 +113,13 @@
 
     function translate($number) {
         $aryRangeIndex = [
-            'length_3' => [ 'range' => 100, 'index' => 1],
-            'length_4' => [ 'range' => 1000, 'index' => 1],
-            'length_5' => [ 'range' => 1000, 'index' => 2],
-            'length_6' => [ 'range' => 100000, 'index' => 1],
-            'length_7' => [ 'range' => 100000, 'index' => 2],
-            'length_8' => [ 'range' => 10000000, 'index' => 1],
-            'length_9' => [ 'range' => 10000000, 'index' => 2],
+            'length_3'  => [ 'range' => 100, 'index' => 1],
+            'length_4'  => [ 'range' => 1000, 'index' => 1],
+            'length_5'  => [ 'range' => 1000, 'index' => 2],
+            'length_6'  => [ 'range' => 100000, 'index' => 1],
+            'length_7'  => [ 'range' => 100000, 'index' => 2],
+            'length_8'  => [ 'range' => 10000000, 'index' => 1],
+            'length_9'  => [ 'range' => 10000000, 'index' => 2],
             'length_10' => [ 'range' => 1000000000, 'index' => 1],
             'length_11' => [ 'range' => 1000000000, 'index' => 2],
             'length_12' => [ 'range' => 100000000000, 'index' => 1],
